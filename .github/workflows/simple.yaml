@@ -14,3 +14,9 @@ jobs:
         run: |         
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        #Inform git actions to run your commands in different shell (not in bash which is by default)
+        shell: python
