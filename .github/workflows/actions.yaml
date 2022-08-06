@@ -1,0 +1,19 @@
+name: Action Workflow
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      #Use JS actions which are located in another github repo
+      - name: Simple JS Action
+        id: greet
+        # @ you can reference specific commit,branch,version(tags)...
+        uses: actions/hello-world-javascript-actions@v1
+        #provide input:
+        with:
+          who-to-greet: Stevan
+      - name: Log Greeting time
+        #Acess output variable which github make avaliable to us you have to reference specific ID for that step.
+        run: echo "${{ steps.greet.outputs.time }}"
