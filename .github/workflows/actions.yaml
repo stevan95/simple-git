@@ -10,7 +10,7 @@ jobs:
       - name: Simple JS Action
         id: greet
         # @ you can reference specific commit,branch,version(tags)...
-        uses: actions/hello-world-javascript-actions@v1
+        uses: actions/hello-world-javascript-action@v1
         #provide input:
         with:
           who-to-greet: Stevan
