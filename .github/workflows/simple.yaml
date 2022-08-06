@@ -1,0 +1,16 @@
+#Name of entire workflow
+name: Shell Commands
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multiline script
+        #Pipe caracter can be used to run multiple commands in shell
+        run: |         
+          node -v
+          npm -v
