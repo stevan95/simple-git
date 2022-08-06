@@ -20,8 +20,10 @@ jobs:
           print(platform.processor())
         #Inform git actions to run your commands in different shell (not in bash which is by default)
         shell: python
-
   run-windows-command:
+    #Jobs are running in parallel by default you can set up it to run one by on using need keyword which will make your job 
+    #dependant of another job and it will be executed only if your first job is successful.
+    needs: ["run-shell-command"]
     runs-on: windows-latest
     steps:
       - name: Directory PowerShell
