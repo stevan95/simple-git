@@ -12,9 +12,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
       - name: List Files
+        #GITHUB_SHA git commit hash value
         run: |
           pwd
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
       #Use JS actions which are located in another github repo
       - name: Simple JS Action
         id: greet
