@@ -1,11 +1,17 @@
 name: Action Workflow
 
+#Actions are code that you write and you can use it in your workflow.
+
 on: [push]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
       #Use JS actions which are located in another github repo
       - name: Simple JS Action
         id: greet
