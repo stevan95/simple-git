@@ -8,10 +8,13 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      #Use github official checkout action to clone your repo
+      - name: checkout
+        uses: actions/checkout@v1
       - name: List Files
         run: |
           pwd
-          ls
+          ls -a
       #Use JS actions which are located in another github repo
       - name: Simple JS Action
         id: greet
@@ -23,3 +26,4 @@ jobs:
       - name: Log Greeting time
         #Acess output variable which github make avaliable to us you have to reference specific ID for that step.
         run: echo "${{ steps.greet.outputs.time }}"
+      
