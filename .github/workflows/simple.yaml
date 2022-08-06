@@ -20,3 +20,12 @@ jobs:
           print(platform.processor())
         #Inform git actions to run your commands in different shell (not in bash which is by default)
         shell: python
+
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory using bash
+        run: pwd
+        shell: bash
