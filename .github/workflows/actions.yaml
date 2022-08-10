@@ -2,7 +2,7 @@ name: Action Workflow
 
 #Actions are code that you write and you can use it in your workflow.
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-github-actions:
