@@ -8,7 +8,7 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      #Use github official checkout action to clone your repo
+      #Use github official checkout action to clone your repos
       - name: checkout
         uses: actions/checkout@v1
       - name: List Files
