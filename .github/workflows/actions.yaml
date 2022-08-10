@@ -2,7 +2,9 @@ name: Action Workflow
 
 #Actions are code that you write and you can use it in your workflow.
 
-on: 
+on:
+  #schedule:
+    #- cron: "* * * * *"
   push:
   pull_request:
     types: [closed, assigned, opened]
