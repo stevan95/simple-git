@@ -2,7 +2,15 @@ name: Action Workflow
 
 #Actions are code that you write and you can use it in your workflow.
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - master
+      # - 'feature/* feature/**   *-match feature/breanch **-match feature/branch/a'
+
+    #Run workflow on specific file (This will run workflow only when js file is pushed.)
+    # paths:
+    #   - '**.js'
 
 jobs:
   run-github-actions:
